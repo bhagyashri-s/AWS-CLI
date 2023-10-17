@@ -1,0 +1,13 @@
+Add sns notification
+
+1.create topic
+    Command:
+    aws sns create-topic --name my-topic
+
+2.subscribe topic
+    command:
+    aws sns subscribe --topic-arn arn:aws:sns:ap-south-1:954227513786:my-topic --protocol email --notification-endpoint bhagyashritupe96@gmail.com
+
+3. Publish topic
+    Command:
+    aws sns publish --topic-arn arn:aws:sns:ap-south-1:954227513786:my-topic --message "Hello World!"
