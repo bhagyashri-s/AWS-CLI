@@ -1,0 +1,8 @@
+Load Balancer
+
+    Create Internet facing Application Load Balancer with above subnets
+    Syntax:
+    aws elbv2 create-load-balancer --name <load-balancer-name> --subnets <subnet-ids> --security-groups <security-group-ids> --scheme internet-facing --type <load-balancer-type> --ip-address-type <ip-address-type> --region <region>
+    
+    Command:
+    aws elbv2 create-load-balancer --name cli-dev-load-balancer --subnets subnet-044eee740e836498d subnet-0b9b7eb0abe3ac5ff subnet-097c0cf423855631d --security-groups sg-05a2c6c6a2cff7c7a --scheme internet-facing --type application --ip-address-type ipv4 --region ap-south-1
