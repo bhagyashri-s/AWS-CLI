@@ -1,0 +1,6 @@
+Register the target
+    Syntax:
+    aws elbv2 register-targets --target-group-arn <target-group-arn> --targets Id=<instance-id>
+    
+    Command:
+    aws elbv2 register-targets --target-group-arn arn:aws:elasticloadbalancing:ap-south-1:954227513786:targetgroup/cli-dev-target-group/c7a0bec3c10a5f72 --targets Id=i-01635070307f5dd34
