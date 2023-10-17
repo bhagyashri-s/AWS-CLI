@@ -1,0 +1,18 @@
+1.Launch an instance using the subnet and the security group
+    Syntax:
+    aws ec2 run-instances --image-id <ami-id> --count <number-of-instance> --instance-type <instance-type> --key-name <key-name> --subnet-id <subnet-id> --security-group-ids <security-group-id> --user-data <file://user-data-script-path> --associate-public-ip-address 
+    aws ec2 create-tags --resources <instance-id> --tags Key=Name,Value=<instance-name>
+    
+    Command:
+    aws ec2 run-instances --image-id ami-03d294e37a4820c21 --count 1 --instance-type t2.micro --key-name DevOps-key --subnet-id subnet-044eee740e836498d --security-group-ids sg-05a2c6c6a2cff7c7a --user-data file://C:\Users\rohit\Documents\cli_script.txt --associate-public-ip-address 
+    aws ec2 create-tags --resources i-01635070307f5dd34 --tags Key=Name,Value=cli-dev-instance
+
+
+2.cli_script.txt:
+
+    #!/bin/bash
+    yum update -y
+    yum install -y httpd
+    systemctl start httpd.service
+    systemctl enable httpd.service
+    echo "Hello, I am $(hostname -f) Apache HTTP Server Demo" > /var/www/html/index.html
