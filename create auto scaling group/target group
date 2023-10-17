@@ -1,0 +1,6 @@
+Create target group for the VPC
+    Syntax:
+    aws elbv2 create-target-group --name <target-group-name> --protocol <protocol> --port <port> --vpc-id <vpc-id> --region <region>
+    
+    Command:
+    aws elbv2 create-target-group --name cli-dev-target-group --protocol HTTP --port 80 --vpc-id vpc-007a2ec251677c0fe --region ap-south-1
