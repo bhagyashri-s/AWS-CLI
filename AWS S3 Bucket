@@ -1,0 +1,15 @@
+1.Create new bucket
+    Command:
+    aws s3api create-bucket --bucket cli-bucket-2023 --region ap-south-1 --create-bucket-configuration LocationConstraint=ap-south-1
+
+2.Upload objects -in bucket:
+    Command:
+    aws s3 cp "C:\Users\rohit\Documents\index.txt" s3://cli-bucket-2023/
+
+3.Delete Objects from bucket:
+     Commands:
+     aws s3api delete-object --bucket cli-bucket-2023 --key index.txt
+
+4.Delete bucket
+    Command:
+    aws s3api delete-bucket --bucket cli-bucket-2023 --region ap-south-1
