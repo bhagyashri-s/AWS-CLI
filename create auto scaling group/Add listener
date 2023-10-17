@@ -1,0 +1,7 @@
+Create listener for load balancer and target group
+Syntax:
+aws elbv2 create-listener --load-balancer-arn <load-balancer-arn> --protocol <protocol> --port <port> --default-actions <default-actions> --region <region>
+
+Command:
+aws elbv2 create-listener --load-balancer-arn arn:aws:elasticloadbalancing:ap-south-1:954227513786:loadbalancer/app/cli-dev-load-balancer/7de68d14318f38e7 --protocol HTTP --port 80 --default-actions Type=forward,TargetGroupArn=arn:aws:elasticloadbalancing:ap-south-1:954227513786:targetgroup/cli-dev-target-group/c7a0bec3c10a5f72 --region ap-south-1
+
