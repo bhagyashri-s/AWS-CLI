@@ -1,4 +1,4 @@
 Create Launch template
 
-Command :
-aws autoscaling create-launch-configuration --launch-configuration-name cli-asg --image-id ami-03d294e37a4820c21 --key-name DevOps-key --security-groups sg-05a2c6c6a2cff7c7a --classic-link-vpc-id vpc-007a2ec251677c0fe --classic-link-vpc-security-groups sg-05a2c6c6a2cff7c7a --user-data #!/bin/bash yum update -y yum install -y httpd systemctl start httpd.service systemctl enable httpd.service echo "Hello, I am $(hostname -f) Apache HTTP Server Demo" > /var/www/html/index.html --instance-id i-01635070307f5dd34 --instance-type t2.micro --region ap-southeast-2 --output json
+Command:
+aws ec2 create-launch-template - launch-template-name cli-template-for-auto-scaling - version-description version1 - launch-template-data file://./Documents/cli/asg_launch_template.json
